@@ -17,7 +17,7 @@ app.use(session({
 }));
 
 // set env
-// app.set('env', 'production');
+app.set('env', 'production');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
