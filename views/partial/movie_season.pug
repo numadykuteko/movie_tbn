@@ -1,0 +1,18 @@
+#detailSeasonArea.no-gutters
+  .mt-3.row.no-gutters
+    if (listSeasons != null && listSeasons != undefined && listSeasons.length > 0)
+      #detailSeasonList.col-lg-4.col-md-5.col-12
+        label.text-white(for="selectSeason") Choose season:
+        select.form-control.w-75#selectSeason 
+          each season in listSeasons
+            option(value=season.id, data-name=season.seasonsName) #{season.seasonsName}
+
+      #detailEpisodeEmpty
+        span#detailEpisodeEmptyText.text-white.text-medium No episode found.
+        a#detailEpisodeReload.font-italic.text-white.d-block.cursor-pointer Reload
+
+      #detailEpisodeList.col-lg-8.col-md-7.col-12.mt-md-0.mt-3.d-flex.flex-wrap.align-content-between
+    else 
+      .col-lg-4.col-md-5.col-12
+        span.text-white.text-medium No season found.
+  

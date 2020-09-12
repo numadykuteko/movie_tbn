@@ -1,0 +1,18 @@
+if (listMovie != undefined && listMovie != null && listMovie.length > 0)
+  #indexDataList.row.no-gutters
+    each movie in listMovie
+      .col-6.col-md-4.col-lg-3.mt-4.common-item-list
+        a.card.w-90.mx-auto(href="/detail/"+movie.slug)
+          img.w-100.rounded.common-item-list-img(src=movie.linkThumbnail, onerror="this.src='/images/icon.png'")
+          .card-body.p-2
+            p.card-text.common-item-list-title.text-black.font-weight-bold #{movie.title}
+            if (movie.isTvseries == 1)
+              span.card-text.common-item-list-category.text-primary Series 
+              span.card-text.common-item-list-category.text-primary.d-none.d-sm-inline | #{movie.categoryName}
+            else 
+              span.card-text.common-item-list-category.text-primary Movie 
+              span.card-text.common-item-list-category.text-primary.d-none.d-sm-inline | #{movie.categoryName}
+
+  include pagination.pug
+else 
+  include no_data.pug

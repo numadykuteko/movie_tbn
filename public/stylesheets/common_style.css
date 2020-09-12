@@ -1,0 +1,165 @@
+body {
+  overflow-x: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer!important;
+}
+
+.loading-icon {
+  display: none;
+  position: fixed;
+  z-index: 1200;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba( 255, 255, 255, .8 ) 
+            url(/images/icon_loading.gif) 
+            50% 50% 
+            no-repeat;
+}
+
+.loading-page {
+  overflow: hidden;   
+}
+
+.loading-page .loading-icon {
+  display: block;
+}
+
+p {
+  margin-bottom: 5px!important;
+}
+.w-95 {
+  width: 95%!important;
+}
+.w-90 {
+  width: 90%!important;
+}
+.w-85 {
+  width: 85%!important;
+}
+.w-80 {
+  width: 80%!important;
+}
+.w-70 {
+  width: 70%!important;
+}
+.w-65 {
+  width: 65%!important;
+}
+.w-60 {
+  width: 60%!important;
+}
+.w-55 {
+  width: 55%!important;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-giant {
+  font-size: 21px;
+}
+
+.text-big {
+  font-size: 19px;
+}
+
+.text-medium {
+  font-size: 17px;
+}
+
+.text-small {
+  font-size: 15px;
+}
+
+a {
+  color: unset;
+}
+
+
+/* for common class */
+
+.common-style-content-web {
+  margin-top: 80px;
+}
+
+.common-style-navbar .active a.nav-link {
+  background-color: #28a745;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+.common-style-navbar-brand {
+  font-weight: bold;
+}
+
+.common-item-list {
+}
+
+.content-website {
+  min-height: 100vh;
+  background: #343a40;
+  overflow: auto;
+}
+
+.common-item-list-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  height: 48px;
+  -webkit-box-orient: vertical;
+}
+
+.common-item-list-img {
+  height: 195px;
+}
+
+.pagination .page-item .page-link {
+  background: whitesmoke;
+}
+.pagination .page-item .page-link.active {
+  font-weight: bold;
+  background: white;
+  text-decoration-line: underline;
+}
+
+#noData {
+  min-height: 300px;
+  text-align: center;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .text-giant {
+    font-size: 25px;
+  }
+  
+  .text-big {
+    font-size: 22px;
+  }
+  
+  .text-medium {
+    font-size: 19px;
+  }
+  
+  .text-small {
+    font-size: 16px;
+  }
+
+  .common-item-list-img {
+    height: 230px; 
+  }
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+}
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }

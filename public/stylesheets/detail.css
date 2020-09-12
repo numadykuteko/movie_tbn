@@ -1,0 +1,128 @@
+#detailPosterArea {
+  height: 200px;
+  overflow: hidden;
+}
+
+#detailPosterArea img {
+  object-fit: cover;
+  mask-image: -webkit-gradient(linear, left top, 
+  left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));;
+  -webkit-mask-image: -webkit-gradient(linear, left top, 
+    left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+#detailThumbnailArea {
+  text-align: center;
+}
+
+#detailThumbnailArea img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+} 
+
+.detail-category-text {
+  height: 50px;
+  background: green;
+  border-radius: 25px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  display: table;
+}
+
+.detail-category-text span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#detailSeasonArea #detailEpisodeList {
+  min-height: 75px;
+  max-height: 300px;
+  height: auto;
+  overflow: auto;
+}
+
+.detail-episode {
+  height: 85px;
+  width: auto;
+  position: relative;
+  text-align: center;
+}
+
+.detail-episode img {
+  opacity: 0.6;
+  -webkit-filter: blur(1px); /* Safari 6.0 - 9.0 */
+  filter: blur(1px);
+  mask-image: -webkit-gradient(linear, left top, 
+  left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));;
+  -webkit-mask-image: -webkit-gradient(linear, left top, 
+    left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+.detail-episode span.detail-episode-name {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: white;
+}
+
+.detail-episode-avatar {
+  min-width: 85px;
+}
+
+.selection-episode img {
+  opacity: 0.8;
+}
+
+.selection-episode span.detail-episode-name {
+  color: #97EAA8;
+  font-weight: bold;
+}
+
+#detailYoutubeView {
+  height: 300px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .detail-episode {
+    height: 105px;
+  }
+
+  .detail-episode-avatar {
+    min-width: 105px;
+  }  
+  
+  #detailThumbnailArea {
+    text-align: left;
+  }
+  #detailThumbnailArea img {
+    width: 240px;
+    height: 240px;
+  } 
+      
+  #detailYoutubeView {
+    height: 400px;
+  } 
+}
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  
+  #detailYoutubeView {
+    height: 515px;
+  } 
+}
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  #detailYoutubeView {
+    height: 620px;
+  } 
+}

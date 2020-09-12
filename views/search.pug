@@ -1,0 +1,26 @@
+extends layout
+
+block more_stylesheet
+  link(rel="stylesheet", href="/stylesheets/search.css")
+
+block content
+
+  div.content-website
+    div.container.px-2.px-md-3
+
+      include partial/navbar.pug
+
+      #indexHeader.common-style-content-web
+        h2.index-header-title.text-white Search for: #{reqKeyword}
+
+      include partial/movie_list.pug
+      
+      include partial/footer.pug
+
+      block more_script
+        script.
+          var reqKeyword = #{reqKeyword != undefined ? "'" + reqKeyword + "'" : "''"};
+          var reqPage = #{reqPage != undefined ? "'" + reqPage + "'" : "''"};
+
+        script(src="javascripts/search_javascript.js")
+

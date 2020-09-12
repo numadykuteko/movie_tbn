@@ -1,0 +1,26 @@
+extend layout
+
+block more_stylesheet
+  link(rel="stylesheet", href="/stylesheets/detail.css")
+
+block content
+
+  div.content-website
+  
+    div.container.px-2.px-md-3
+
+      include partial/navbar.pug
+
+      include partial/movie_info.pug
+
+      include partial/movie_season.pug
+
+      include partial/movie_play.pug
+
+      include partial/footer.pug
+
+block more_script
+  script.
+    var imageLink = #{"'" + selectionMovie.linkThumbnail + "'"};
+  script(src="/javascripts/detail_series_javascript.js")
+

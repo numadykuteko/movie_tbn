@@ -1,0 +1,39 @@
+#indexHeader.common-style-content-web
+  h2.index-header-title.text-white All anime
+
+#indexFilter.row.no-gutters.mt-3.pt-3.pb-2.border.border-left-0.border-right-0.border-secondary
+  .col-6.col-lg-3.form-group   
+    .w-90.mx-auto
+      label.text-white(for="selectType") Anime types
+      select.form-control#selectType
+        option#selectTypeAll(value="-1") All types
+        option#selectTypeMovies(value=1, selected= (reqType=="movie")) Movies
+        option#selectTypeSeries(value=2, selected= (reqType=="series")) Series
+        
+  .col-6.col-lg-3.form-group 
+    .w-90.mx-auto        
+      label.text-white(for="selectGenres") Anime genres
+      select.form-control#selectGenres
+        option#selectGenresAll(value="-1") All genres
+        
+        if (listCategory != undefined && listCategory != null && listCategory.length > 0) 
+          each category in listCategory
+            option.select-genres-option(value=category.slug, selected=(reqCategory==category.slug)) #{category.name}
+
+  .col-6.col-lg-3.mt-2.mt-lg-0.form-group 
+    .w-90.mx-auto
+      label.text-white(for="selectYear") Year
+      select.form-control#selectYear 
+        option#selectYearAll(value="-1") All years
+        if (listYear != undefined && listYear != null && listYear.length > 0) 
+          each year in listYear
+            option.select-year-option(value=year, selected=(reqYear==year)) #{year}
+
+  .col-6.col-lg-3.mt-2.mt-lg-0.form-group
+    .w-90.mx-auto 
+      label.text-white(for="selectQuality") Quality
+      select.form-control#selectQuality
+        option#selectYearQuality(value=-1) All quality
+        if (listQuality != undefined && listQuality != null && listQuality.length > 0) 
+          each quality in listQuality
+            option.select-quality-option(value=quality, selected=(reqQuality==quality)) #{quality}

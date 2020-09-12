@@ -1,0 +1,43 @@
+if (myPage != undefined && myPage != null && myPage.number >= 0 && myPage.totalPages >= 0)
+
+  nav#indexPagination.mt-5.mb-5(aria-label="Page navigation")
+    ul.pagination.justify-content-center.bg-dark
+      if (myPage.number == 0)  
+        li.page-item.disabled
+          a.cursor-pointer.page-link(tabindex="-1", aria-disabled=true) Previous
+      else 
+        li.page-item
+          a.cursor-pointer.page-link(tabindex="-1", data-page = myPage.number) Previous
+
+      if (myPage.number == 0)
+        li.cursor-pointer.page-item
+          a.active.page-link(data-page = 1) 1
+        if (myPage.totalPages >= 2)
+          li.cursor-pointer.page-item
+            a.page-link(data-page = 2) 2
+        if (myPage.totalPages >= 3)
+          li.cursor-pointer.page-item
+            a.page-link(data-page = 3) 3
+      else if (myPage.number == myPage.totalPages - 1)
+        if (myPage.totalPages >= 3)
+          li.cursor-pointer.page-item
+            a.page-link(data-page = myPage.totalPages-2) #{myPage.totalPages-2}
+        if (myPage.totalPages >= 2)
+          li.cursor-pointer.page-item
+            a.page-link(data-page = myPage.totalPages-1) #{myPage.totalPages-1}
+        li.cursor-pointer.page-item
+          a.active.active.page-link(data-page = myPage.totalPages) #{myPage.totalPages}
+      else
+        li.cursor-pointer.page-item
+          a.page-link(data-page = myPage.number) #{myPage.number}
+        li.cursor-pointer.page-item
+          a.page-link.active(data-page = myPage.number+1) #{myPage.number+1}
+        li.cursor-pointer.page-item
+          a.page-link(data-page = myPage.number+2) #{myPage.number+2}
+
+      if (myPage.number == myPage.totalPages - 1)
+        li.cursor-pointer.page-item.disabled
+            a.page-link(aria-disabled=true) Next
+      else
+        li.cursor-pointer.page-item
+          a.page-link(data-page = myPage.number + 2) Next
