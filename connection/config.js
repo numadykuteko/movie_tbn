@@ -1,4 +1,5 @@
 module.exports = {
+  domain: "http://onesharemedia.club/",
   ENGLISH: 0,
   defaultLanguage: 0,
   typeMovieText: "movie",

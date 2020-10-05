@@ -43,6 +43,6 @@ module.exports = {
   },
 
   returnErrorGetPage: function(res) {
-    res.render( 'error_page', {message: "Ops. Something when wrong."});
+    res.render( 'error_page', {message: "¡Ups! Algo salió mal."});
   }
 }

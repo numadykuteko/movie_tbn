@@ -7,10 +7,10 @@ if (listMovie != undefined && listMovie != null && listMovie.length > 0)
           .card-body.p-2
             p.card-text.common-item-list-title.text-black.font-weight-bold #{movie.title}
             if (movie.isTvseries == 1)
-              span.card-text.common-item-list-category.text-primary Series 
+              span.card-text.common-item-list-category.text-primary Serie 
               span.card-text.common-item-list-category.text-primary.d-none.d-sm-inline | #{movie.categoryName}
             else 
-              span.card-text.common-item-list-category.text-primary Movie 
+              span.card-text.common-item-list-category.text-primary Película 
               span.card-text.common-item-list-category.text-primary.d-none.d-sm-inline | #{movie.categoryName}
 
   include pagination.pug

@@ -79,10 +79,10 @@ var startHandleMovie = function(req, res, selectionMovie) {
     function(result) {
       if (result.status == baseResponse.status.success) {
         var listSeasons = result.data;
-        res.render('detail_series', { title: selectionMovie.title, selectionMovie: selectionMovie, listSeasons: listSeasons });
+        res.render('detail_series', { title: selectionMovie.title, selectionMovie: selectionMovie, listSeasons: listSeasons, domain: config.domain });
         
       } else {
-        res.render('detail_series', { title: selectionMovie.title, selectionMovie: selectionMovie, listSeasons: [] });
+        res.render('detail_series', { title: selectionMovie.title, selectionMovie: selectionMovie, listSeasons: [], domain: config.domain });
       }
     },
     function(error) {
@@ -94,10 +94,10 @@ var startHandleMovie = function(req, res, selectionMovie) {
     function(result) {
       if (result.status == baseResponse.status.success) {
         var listVideos = result.data;
-        res.render('detail_movie', { title: selectionMovie.title, selectionMovie: selectionMovie, listVideos: listVideos });
+        res.render('detail_movie', { title: selectionMovie.title, selectionMovie: selectionMovie, listVideos: listVideos, domain: config.domain });
         
       } else {
-        res.render('detail_movie', { title: selectionMovie.title, selectionMovie: selectionMovie, listVideos: [] });
+        res.render('detail_movie', { title: selectionMovie.title, selectionMovie: selectionMovie, listVideos: [], domain: config.domain });
       }
     },
     function(error) {

@@ -4,10 +4,10 @@ if (myPage != undefined && myPage != null && myPage.number >= 0 && myPage.totalP
     ul.pagination.justify-content-center.bg-dark
       if (myPage.number == 0)  
         li.page-item.disabled
-          a.cursor-pointer.page-link(tabindex="-1", aria-disabled=true) Previous
+          a.cursor-pointer.page-link(tabindex="-1", aria-disabled=true) Previa
       else 
         li.page-item
-          a.cursor-pointer.page-link(tabindex="-1", data-page = myPage.number) Previous
+          a.cursor-pointer.page-link(tabindex="-1", data-page = myPage.number) Previa
 
       if (myPage.number == 0)
         li.cursor-pointer.page-item
@@ -37,7 +37,7 @@ if (myPage != undefined && myPage != null && myPage.number >= 0 && myPage.totalP
 
       if (myPage.number == myPage.totalPages - 1)
         li.cursor-pointer.page-item.disabled
-            a.page-link(aria-disabled=true) Next
+            a.page-link(aria-disabled=true) Próxima
       else
         li.cursor-pointer.page-item
-          a.page-link(data-page = myPage.number + 2) Next
+          a.page-link(data-page = myPage.number + 2) Próxima

@@ -50,7 +50,7 @@ router.get('/', [categoryMiddleware.getCategory], function(req, res, next) {
       });
       sessionManager.saveMovieList(req, listMovie);
 
-      res.render('index', { title: 'Foxcorn TV',reqType: reqType, reqCategory: reqCategory, reqYear: reqYear, reqQuality: reqQuality, listCategory: listCategory, myPage: myPage, listMovie: listMovie, listYear: listYear, listQuality: config.listQuality });
+      res.render('index', { title: 'GoGo Anime',reqType: reqType, reqCategory: reqCategory, reqYear: reqYear, reqQuality: reqQuality, listCategory: listCategory, myPage: myPage, listMovie: listMovie, listYear: listYear, listQuality: config.listQuality });
     } else {
       return baseResponse.returnErrorGetPage(res);
     }
@@ -108,7 +108,7 @@ router.get('/filter', [categoryMiddleware.getCategory], function(req, res, next)
       });
       sessionManager.saveMovieList(req, listMovie);
 
-      res.render('index', { title: 'Foxcorn TV',reqType: reqType, reqCategory: reqCategory, reqYear: reqYear, reqQuality: reqQuality, listCategory: listCategory, myPage: myPage, listMovie: listMovie, listYear: listYear, listQuality: config.listQuality });
+      res.render('index', { title: 'GoGo Anime',reqType: reqType, reqCategory: reqCategory, reqYear: reqYear, reqQuality: reqQuality, listCategory: listCategory, myPage: myPage, listMovie: listMovie, listYear: listYear, listQuality: config.listQuality });
 
     } else {
       return baseResponse.returnErrorGetPage(res);

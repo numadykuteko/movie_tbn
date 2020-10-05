@@ -78,6 +78,11 @@ a {
   color: unset;
 }
 
+.pluginSkinLight {
+  max-width: 100%!important;
+  width: 100%!important;
+}
+
 
 /* for common class */
 
@@ -89,6 +94,10 @@ a {
   background-color: #28a745;
   padding-left: 5px;
   font-weight: bold;
+}
+
+.common-style-navbar .navbar-toggler-icon {
+  background-image: url(../images/icon_search.png);
 }
 
 .common-style-navbar-brand {
