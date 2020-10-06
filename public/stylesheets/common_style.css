@@ -59,30 +59,24 @@ p {
   text-align: center;
 }
 .text-giant {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 .text-big {
-  font-size: 19px;
-}
-
-.text-medium {
   font-size: 17px;
 }
 
-.text-small {
+.text-medium {
   font-size: 15px;
+}
+
+.text-small {
+  font-size: 13px;
 }
 
 a {
   color: unset;
 }
-
-.pluginSkinLight {
-  max-width: 100%!important;
-  width: 100%!important;
-}
-
 
 /* for common class */
 
@@ -138,6 +132,11 @@ a {
 #noData {
   min-height: 300px;
   text-align: center;
+}
+
+.ads-banner {
+  height: 150px;
+  width: 100%;
 }
 
 /* Small devices (landscape phones, 576px and up) */

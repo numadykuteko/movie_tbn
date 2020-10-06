@@ -1,4 +1,4 @@
-#detailPosterArea.common-style-content-web
+#detailPosterArea
   img.h-100.w-100.img-fluid(src=selectionMovie.linkPoster)
 
 #detailDetailArea.row.no-gutters.pb-3.border.border-left-0.border-right-0.border-top-0.border-secondary
@@ -11,9 +11,9 @@
     p#detailDescriptionText.text-muted.text-white-50.mt-3 #{selectionMovie.description}
 
     #detailCategoryList.d-flex.flex-wrap.align-content-between
-      a.cursor-pointer.detail-category-text.bg-success.mt-3(href="/filter?type="+(selectionMovie.isTvseries == 1 ? "series" : "movie"))
+      a.cursor-pointer.detail-category-text.bg-success.mt-3.select-video-to-play(href="/filter?type="+(selectionMovie.isTvseries == 1 ? "series" : "movie"))
         span.text-uppercase.text-white.text-small #{selectionMovie.isTvseries == 1 ? "TV serie" : "Película"}
-      a.cursor-pointer.detail-category-text.bg-primary.ml-3.mt-3(href="/filter?genres="+selectionMovie.categorySlug)
+      a.cursor-pointer.detail-category-text.bg-primary.ml-3.mt-3.select-video-to-play(href="/filter?genres="+selectionMovie.categorySlug)
         span.text-uppercase.text-white.text-small #{selectionMovie.categoryName}
-      a.cursor-pointer.detail-category-text.bg-info.ml-3.mt-3(href="/filter?quality="+selectionMovie.videoQuality)
+      a.cursor-pointer.detail-category-text.bg-info.ml-3.mt-3.select-video-to-play(href="/filter?quality="+selectionMovie.videoQuality)
         span.text-uppercase.text-white.text-small #{selectionMovie.videoQuality}

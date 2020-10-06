@@ -10,9 +10,13 @@ block content
 
       include partial/navbar.pug
 
+      include partial/ads/ads_top_banner_home.pug
+
       include partial/filter.pug
 
       include partial/movie_list.pug
+
+      include partial/ads/ads_footer_banner_home.pug
 
       include partial/footer.pug
 
@@ -25,3 +29,5 @@ block more_script
     var reqPage = #{reqPage != undefined ? "'" + reqPage + "'" : "''"};
 
   script(src="javascripts/index_javascript.js")
+
+  script(src="javascripts/home_ads_click.js")

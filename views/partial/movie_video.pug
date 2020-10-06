@@ -7,7 +7,7 @@
       #detailEpisodeList.col-lg-8.col-md-7.col-12.mt-md-0.mt-3.d-flex.flex-wrap.align-content-between
         - var index = 1
         each video in listVideos
-          .detail-episode.cursor-pointer.mr-3.mb-3(data-link=video.fileUrl, data-label=index)
+          .detail-episode.cursor-pointer.mr-3.mb-3.select-video-to-play(data-link=video.fileUrl, data-label=index)
             img.detail-episode-avatar.h-100.w-auto(src=selectionMovie.id, onerror="this.src='/images/icon.png'")
             span.detail-episode-name.text-small Enlace #{index++}
     else 

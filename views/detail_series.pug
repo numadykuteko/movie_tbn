@@ -11,6 +11,8 @@ block content
 
       include partial/navbar.pug
 
+      include partial/ads/ads_top_banner_detail.pug
+
       include partial/movie_info.pug
 
       include partial/movie_season.pug
@@ -19,10 +21,13 @@ block content
 
       include partial/movie_facebook_comment.pug
 
+      include partial/ads/ads_footer_banner_detail.pug
+
       include partial/footer.pug
 
 block more_script
   script.
     var imageLink = #{"'" + selectionMovie.linkThumbnail + "'"};
   script(src="/javascripts/detail_series_javascript.js")
+  script(src="/javascripts/detail_ads_click.js")
 

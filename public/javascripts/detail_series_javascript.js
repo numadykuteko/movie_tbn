@@ -59,7 +59,7 @@ var showEpisodeList = function() {
     var index = 0;
     episodeList.forEach(episode => {
       $("#detailEpisodeList").append(
-        '<div class="cursor-pointer detail-episode mr-3 mb-3" data-index=' + index + '>'+
+        '<div class="cursor-pointer detail-episode mr-3 mb-3 select-video-to-play" data-index=' + index + '>'+
         '<img class="detail-episode-avatar h-100 w-auto" src="' + imageLink + '">'+
         '<span class="detail-episode-name text-small">Ep. ' + episode.episodesName + '</span></div>');
         index++;

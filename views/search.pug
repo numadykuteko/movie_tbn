@@ -10,11 +10,15 @@ block content
 
       include partial/navbar.pug
 
-      #indexHeader.common-style-content-web
+      include partial/ads/ads_top_banner_search.pug
+
+      #indexHeader
         h2.index-header-title.text-white Buscar : #{reqKeyword}
 
       include partial/movie_list.pug
       
+      include partial/ads/ads_footer_banner_search.pug
+
       include partial/footer.pug
 
       block more_script
@@ -23,4 +27,7 @@ block content
           var reqPage = #{reqPage != undefined ? "'" + reqPage + "'" : "''"};
 
         script(src="javascripts/search_javascript.js")
+
+        script(src="javascripts/search_ads_click.js")
+
 
