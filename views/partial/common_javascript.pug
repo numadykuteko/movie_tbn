@@ -19,7 +19,7 @@ script.
   const success_code = 200;
   var block_list = [-500, -400, -300];
   var youtube_link_prefix = /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
-
+  var is_need_ads = false;
   var startLoading = function () {
     $("#contentPage").addClass("loading-page");
   }
