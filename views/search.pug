@@ -21,13 +21,13 @@ block content
 
       include partial/footer.pug
 
-      block more_script
-        script.
-          var reqKeyword = #{reqKeyword != undefined ? "'" + reqKeyword + "'" : "''"};
-          var reqPage = #{reqPage != undefined ? "'" + reqPage + "'" : "''"};
+block more_script
+  script.
+    var reqKeyword = #{reqKeyword != undefined ? "'" + reqKeyword + "'" : "''"};
+    var reqPage = #{reqPage != undefined ? "'" + reqPage + "'" : "''"};
 
-        script(src="javascripts/search_javascript.js")
+  script(src="javascripts/search_javascript.js")
 
-        script(src="javascripts/search_ads_click.js")
+  script(src="javascripts/search_ads_click.js")
 
 
